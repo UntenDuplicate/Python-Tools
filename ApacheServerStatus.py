@@ -44,7 +44,7 @@ class ApacheServerStatus(script.Script):
                 for i in i.split("\n"):
                     k, *v = i.split(":")
                     if v:
-                        self.print("    {}: {}".format(self.colored(k), self.colored(":".join(v), dark=True)), dark=True)
+                        self.print("    {}:{}".format(self.colored(k), self.colored(":".join(v), dark=True)), dark=True)
                     else:
                         self.print("    " + self.colored(k))
             self.print("    " + soup.pre.text.replace("\n", "\n    "), dark=True)
